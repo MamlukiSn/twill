@@ -96,6 +96,7 @@
                     tagsEndpoint: '{{ route('admin.media-library.medias.tags') }}',
                     uploaderConfig: {!! json_encode($mediasUploaderConfig) !!}
                 });
+                window['{{ config('twill.js_namespace') }}'].STORE.medias.showMediaReferences = !!'{{ config('twill.media_library.show_media_references') }}';
             @endif
 
             @if (config('twill.enabled.file-library'))
