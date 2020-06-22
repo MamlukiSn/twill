@@ -228,10 +228,12 @@
       updateFromStore: function (newValue) { // called from the formStore mixin
         if (typeof newValue === 'undefined') newValue = ''
 
-        if (this.value !== newValue) {
-          this.value = newValue
-          this.updateEditor(newValue)
-        }
+        debounce(function () {
+          if (this.value !== newValue) {
+            this.value = newValue
+            this.updateEditor(newValue)
+          }
+        }, 10)
       },
       textUpdate: debounce(function () {
         this.saveIntoStore() // see formStore mixin
