@@ -39,6 +39,12 @@ class Media extends Model
         return $query->whereNotIn('id', $usedIds->toArray())->get();
     }
 
+    public function scopeUntagged ($query)
+    {
+        $usedIds = DB::table(config('twill.tagged_table'))->where('taggable_type', $this->getMorphClass())->get()->pluck('taggable_id');
+        return $query->whereNotIn('id', $usedIds->toArray())->get();
+    }
+
     public function getDimensionsAttribute()
     {
         return $this->width . 'x' . $this->height;

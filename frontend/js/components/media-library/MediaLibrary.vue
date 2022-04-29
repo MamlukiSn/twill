@@ -33,6 +33,7 @@
               <a17-vselect class="medialibrary__filter-item" ref="filter" name="tag" :options="tags"
                            :placeholder="$trans('media-library.filter-select-label', 'Filter by tag')" :searchable="true" maxHeight="175px"/>
               <a17-checkbox class="medialibrary__filter-item" ref="unused" name="unused" :initial-value="0" :value="1" :label="$trans('media-library.unused-filter-label', 'Show unused only')"/>
+              <a17-checkbox class="medialibrary__filter-item" ref="untagged" name="untagged" :initial-value="0" :value="1" :label="$trans('media-library.untagged-filter-label', 'Show untagged only')"/>
             </div>
           </a17-filter>
         </div>
@@ -369,6 +370,10 @@
           data.unused = data.unused[0]
         }
 
+        if (Array.isArray(data.untagged) && data.untagged.length) {
+          data.untagged = data.untagged[0]
+        }
+
         return data
       },
       clearFilters: function () {
@@ -378,6 +383,11 @@
         // reset unused field
         if (this.$refs.unused) {
           const input = this.$refs.unused.$el.querySelector('input')
+          input && input.checked && input.click()
+        }
+        // reset untagged field
+        if (this.$refs.untagged) {
+          const input = this.$refs.untagged.$el.querySelector('input')
           input && input.checked && input.click()
         }
 

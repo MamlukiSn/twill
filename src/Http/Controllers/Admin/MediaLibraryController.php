@@ -41,6 +41,7 @@ class MediaLibraryController extends ModuleController implements SignUploadListe
         'search' => 'search',
         'tag' => 'tag_id',
         'unused' => 'unused',
+        'untagged' => 'untagged',
     ];
 
     /**
@@ -131,6 +132,10 @@ class MediaLibraryController extends ModuleController implements SignUploadListe
 
         if ($this->request->has('unused') && (int) $this->request->unused === 1) {
             $requestFilters['unused'] = $this->request->get('unused');
+        }
+
+        if ($this->request->has('untagged') && (int) $this->request->untagged === 1) {
+            $requestFilters['untagged'] = $this->request->get('untagged');
         }
 
         return $requestFilters ?? [];
