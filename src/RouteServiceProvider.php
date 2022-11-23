@@ -44,14 +44,14 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->registerCapsulesRoutes($router);
 
-        $this->mapInternalRoutes(
+        $this->mapHostRoutes(
             $router,
             $this->getRouteGroupOptions(),
             $this->getRouteMiddleware(),
             $this->supportSubdomainRouting()
         );
 
-        $this->mapHostRoutes(
+        $this->mapInternalRoutes(
             $router,
             $this->getRouteGroupOptions(),
             $this->getRouteMiddleware(),
