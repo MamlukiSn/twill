@@ -353,7 +353,7 @@ trait HasSlug
 
                 $slugParam = [
                     'active' => 1,
-                    'slug' => $this->$slugAttribute,
+                    'slug' => $this->getActiveSlug($appLocale) ? $this->getActiveSlug($appLocale)->slug : $this->$slugAttribute,
                     'locale' => $appLocale,
                 ] + $slugDependenciesAttributes;
 
