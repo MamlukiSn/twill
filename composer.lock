@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53e669612d57d76579c271116fb7b5ae",
+    "content-hash": "255e40366dc9f5017c837846065ed4cc",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -1266,20 +1266,17 @@
         },
         {
             "name": "lsrur/inspector",
-            "version": "v1.0.6",
+            "version": "dev-fix/toolbelt-dependency",
             "source": {
                 "type": "git",
-                "url": "https://github.com/lsrur/inspector.git",
-                "reference": "39510a8d24b53dbe071c71c32b7dd9ef004c2461"
+                "url": "https://github.com/MamlukiSn/inspector.git",
+                "reference": "724c47d459402b60b81f6171a9719b26f343ea67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lsrur/inspector/zipball/39510a8d24b53dbe071c71c32b7dd9ef004c2461",
-                "reference": "39510a8d24b53dbe071c71c32b7dd9ef004c2461",
+                "url": "https://api.github.com/repos/MamlukiSn/inspector/zipball/724c47d459402b60b81f6171a9719b26f343ea67",
+                "reference": "724c47d459402b60b81f6171a9719b26f343ea67",
                 "shasum": ""
-            },
-            "require": {
-                "lsrur/toolbelt": "0.3.*"
             },
             "type": "library",
             "autoload": {
@@ -1290,7 +1287,6 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1301,41 +1297,10 @@
                 "laravel",
                 "profiler"
             ],
-            "time": "2017-07-31T22:39:19+00:00"
-        },
-        {
-            "name": "lsrur/toolbelt",
-            "version": "0.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lsrur/toolbelt.git",
-                "reference": "b37a58c073bd4b8e2c83fc6992c90d26ccc0ca5d"
+            "support": {
+                "source": "https://github.com/MamlukiSn/inspector/tree/fix/toolbelt-dependency"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lsrur/toolbelt/zipball/b37a58c073bd4b8e2c83fc6992c90d26ccc0ca5d",
-                "reference": "b37a58c073bd4b8e2c83fc6992c90d26ccc0ca5d",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/Toolbelt.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Set of PHP helper functions wrapped for Laravel.",
-            "keywords": [
-                "functions",
-                "helpers",
-                "laravel",
-                "php",
-                "tools"
-            ],
-            "time": "2016-08-11T22:11:45+00:00"
+            "time": "2023-04-05T09:05:38+00:00"
         },
         {
             "name": "madewithlove/illuminate-psr-cache-bridge",
@@ -4856,11 +4821,14 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "lsrur/inspector": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }

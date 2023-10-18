@@ -48,6 +48,12 @@
       "role": "Backend developer"
     }
   ],
+  "repositories": [
+      {
+          "type": "vcs",
+          "url": "https://github.com/MamlukiSn/inspector.git"
+      }
+  ],
   "require": {
     "php": "^7.0",
     "laravel/framework": "~5.3.0|~5.4.0|~5.5.0|~5.6.0|~5.7.0",
@@ -56,7 +62,7 @@
     "league/flysystem-aws-s3-v3": "^1.0.13",
     "myclabs/php-enum": "^1.5.0",
     "imgix/imgix-php": "^2.1.0",
-    "lsrur/inspector": "^1.0",
+    "lsrur/inspector": "dev-fix/toolbelt-dependency",
     "barryvdh/laravel-debugbar": "^2.4|^3.1",
     "guzzlehttp/guzzle": "^6.2",
     "spatie/once": "^2.0.0",
