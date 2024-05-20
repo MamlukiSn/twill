@@ -40,14 +40,14 @@ class RouteServiceProvider extends ServiceProvider
     {
         \A17\Twill\Facades\TwillRoutes::registerRoutePatterns();
 
-        $this->mapInternalRoutes(
+        $this->mapHostRoutes(
             $router,
             \A17\Twill\Facades\TwillRoutes::getRouteGroupOptions(),
             \A17\Twill\Facades\TwillRoutes::getRouteMiddleware(),
             \A17\Twill\Facades\TwillRoutes::supportSubdomainRouting()
         );
 
-        $this->mapHostRoutes(
+        $this->mapInternalRoutes(
             $router,
             \A17\Twill\Facades\TwillRoutes::getRouteGroupOptions(),
             \A17\Twill\Facades\TwillRoutes::getRouteMiddleware(),
